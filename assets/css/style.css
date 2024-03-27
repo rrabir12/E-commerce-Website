@@ -190,14 +190,15 @@ button:hover{
 }
 .products .buy-btn{
     background-color: #fb774a;
-    transform: translateY(50px);
-    opacity: 0;
+    /* transform: translateY(50px);
+    opacity: 0; */
     transition: 0.3s all;
     color: #fff;
 }
 .products:hover .buy-btn{
-    transform: translateY(0px);
-    opacity: 1;
+    /* transform: translateY(0px);
+    opacity: 1; */
+    color: #000;
 }
 #feature hr{
     width: 30px;
