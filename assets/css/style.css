@@ -106,10 +106,10 @@ button{
     padding: 8px 15px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: 0.5s ease;
+    transition: 1s ease;
 }
 button:hover{
-    background-color: rgb(95, 196, 233);;
+    background-color: rgb(95, 196, 233);
 }
 #brand hr{
     width: 30px;
@@ -125,6 +125,10 @@ button:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+#new button:hover{
+    background-color: grey;
+    transition: 1s ease;
 }
 #new .one{
     position: relative;
@@ -163,7 +167,7 @@ button:hover{
     /* text-align: right; */
 }
 #new .one .details:hover{
-    background-color: rgb(6, 146, 146)
+    background-color: rgb(66, 69, 69);
 }
 #new hr{
     width: 30px;
@@ -186,20 +190,28 @@ button:hover{
 }
 .products:hover img{
     opacity: 0.7;
-    border-radius: 34px;
+    /* border-radius: 34px; */
 }
 .products .buy-btn{
-    background-color: #fb774a;
+   
     /* transform: translateY(50px);
     opacity: 0; */
     transition: 0.3s all;
+    background-color: #fb774b;
     color: #fff;
 }
-.products:hover .buy-btn{
-    /* transform: translateY(0px);
-    opacity: 1; */
-    color: #000;
+.products .buy-btn:hover{
+    transition: 1s all;
+    background-color: #1d1d1d;
+    color: #fff;
 }
+/* .products:hover .buy-btn{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: 0.3s all;
+    background-color: #1d1d1d;
+    color: #fff;
+} */
 #feature hr{
     width: 30px;
     height: 3px !important;

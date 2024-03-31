@@ -79,9 +79,9 @@ hr {
 
               <li class="nav-item">
                 <a href="cart.php"><i class=" fa fa-shopping-cart">
-                  <?php if(isset($_SESSION['quantity']) && $_SESSION['quantity'] != 0) { ?>
-                  <span class="cart_quantity"><?php echo $_SESSION['quantity']; ?></span>
-                 <?php } ?>
+                <?php if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) { ?>
+                  <span class="cart_quantity"><?php echo count($_SESSION['cart']); ?></span>
+                <?php } ?>
                 </i></a>
                <a href="account.php"><i class="fa fa-user"></i></a> 
               </li>

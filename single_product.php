@@ -45,7 +45,7 @@ if(isset($_GET['product_id'])){
            </div>
 
            <div class="col-lg-6 col-md-12 col-sm-12">
-            <h6>Men/Shoes</h6>
+            <h6>Men/Women</h6>
             <h3 class="py-4"><?php echo $row['product_name']; ?></h3>
             <h2>$ <?php echo $row['product_price']; ?></h2>
 
@@ -54,8 +54,14 @@ if(isset($_GET['product_id'])){
                 <input type="hidden" name="product_image" value="<?php echo $row['product_image']; ?>">
                 <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>">
-
+                
+                <select class="mr-4 py-1" name="product_size">
+             <option value="Small">Small</option>
+             <option value="Medium">Medium</option>
+             <option value="Large">Large</option>
+           </select>
                 <input type="number" name="product_quantity" value="1" />
+       
             <button class="buy-btn" type="submit" name="add_to_cart">Add To Cart</button>
             </form>
 

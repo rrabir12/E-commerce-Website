@@ -18,6 +18,7 @@ if(isset($_POST['add_to_cart'])){
         'product_price'=> $_POST['product_price'],
         'product_image'=> $_POST['product_image'],
         'product_quantity'=> $_POST['product_quantity'],
+        'product_size' => isset($_POST['product_size']) ? $_POST['product_size'] : '',
 
         );
 
@@ -39,6 +40,7 @@ if(isset($_POST['add_to_cart'])){
         $product_price=$_POST['product_price'];
         $product_image=$_POST['product_image'];
         $product_quantity=$_POST['product_quantity'];
+        // $product_size=$_POST['product_size'];
 
         $product_array=array(
               
@@ -47,6 +49,7 @@ if(isset($_POST['add_to_cart'])){
         'product_price'=> $product_price,
         'product_image'=> $product_image,
         'product_quantity'=> $product_quantity,
+        // 'product_size'=> $product_size,
 
         );
 
@@ -135,6 +138,8 @@ function calculateTotalCart(){
                         <img src="assets/imgs/<?php echo $value['product_image']; ?>" alt="">
                         <div>
                             <p><?php echo $value['product_name']; ?></p>
+                            <p>Size: <?php echo isset($value['product_size']) ? $value['product_size'] : 'N/A'; ?></p> <!-- Display product size or "N/A" if not available -->
+
                             <small><span>$ </span><?php echo $value['product_price']; ?></small>
                             <br>
                             <form action="cart.php" method="post">
@@ -144,6 +149,9 @@ function calculateTotalCart(){
                         </div>
                     </div>
                 </td>
+                <!-- <td>
+                <p><?php echo $value['product_size']; ?></p>
+                </td> -->
                 <td>
                     
                     <form action="cart.php" method="post">

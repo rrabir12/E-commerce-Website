@@ -22,7 +22,7 @@ if(isset($_POST['place_order'])){
     $order_cost=$_SESSION['total'];
     $order_status="not paid";
     $user_id= $_SESSION['user_id'];
-    $order_date=date('y-m-d H:M:S');
+    $order_date=date('y-m-d H:i:s');
 
     $stm=$conn->prepare('INSERT INTO orders (order_cost,order_status,user_id,user_phone,user_city,user_address,order_date)
     VALUES (?,?,?,?,?,?,?)');
@@ -31,7 +31,7 @@ if(isset($_POST['place_order'])){
 
     $stm_status=$stm->execute();
     if(!$stm_status){
-        header('location: index.php');
+        header('location: ../index.php');
         exit;
     }
 
